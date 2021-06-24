@@ -1,12 +1,12 @@
 
-##Clone
+## Clone
+    git clone https://github.com/michelleNunes/ArtistAPI.git
 
-
-##Python version
+## Python version
 
     >= Python 3.8 version
 
-#Python dependencies
+## Python dependencies
 
     pip install -r requirements.txt
 
