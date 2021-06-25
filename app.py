@@ -10,14 +10,14 @@ app = Flask(__name__)
 
 
 @app.route("/music/<artista>/<cache>")
-def get_artist_song(artista, cache=None):
+def get_artist_song(artista, cache):
     api = genius.Genius(APIConstants.GENIUS_TOKEN)
 
-    artist = api.search_artist(artista, max_songs=10, sort="title")
+    artist = api.search_artist(artista, max_songs=10)
 
-    Database(artist, cache)
+    database_artist = Database(artist, cache)
 
-    return artist.songs
+    return database_artist
 
 
 if __name__ == "__main__":
